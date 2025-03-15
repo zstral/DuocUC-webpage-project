@@ -1,0 +1,297 @@
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    color: white;
+    background-color: rgb(19, 19, 19);
+}
+
+body {
+    font-family: "Rubik", Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+
+.layout {
+    width: 100%;
+    height: 100%;
+}
+    
+.main {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    width: 100%;
+    justify-items: center;
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+    grid-row: 1 / 2;
+    height: 6vh;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 25px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(17, 17, 17, 0.7) 0%, rgba(9,105,121,0.7) 40%, rgba(124,1,38,0.7) 83%);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    }
+
+    .navbar nav {
+        display: flex;
+        width: 95vw;
+        height: 6vh;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar h1 {
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin: 5%;
+    }
+
+    .navbar h1 {
+        color: rgb(255, 255, 255);
+        text-decoration: normal;
+        text-align: center;
+        -o-text-overflow: clip;
+        text-overflow: clip;
+        white-space: pre;
+        text-shadow: 0 0 10px rgb(92, 187, 159) ,
+                    0 0 20px rgb(211, 185, 253) ,
+                    0 0 30px rgb(0, 195, 255) ,
+                    0 0 40px #ffffff , 0 0 70px #ffffff ,
+                    0 0 80px #ffffff, 0 0 100px #ffffff ;
+    }
+
+    .navbar ul{
+        display: flex;
+        list-style: none;
+        margin: 5%;
+        gap: 2rem;
+    }
+
+    .navbar li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+    }
+
+    .navbar li img {
+        display: flex;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 5px;
+        text-decoration: none;
+        background-color: rgb(0, 0, 0);
+        border-radius: 50%;
+        border: 2px solid #000000;
+        color: rgb(255, 255, 255);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .navbar a:hover {
+        background-color: rgb(255, 0, 191);
+    }
+
+    #account:hover {
+        background-color: rgb(18, 0, 179);
+    }
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 80vw;
+    height: 55vh;
+    padding: 90px 0px 90px 0px;
+    margin-top: 15vh;
+    border-radius: 10px;
+    background-image: url(assets/img/gaming.jpg);
+    background-size: cover;
+    background-color: #000000;
+    }
+
+    .content h1 {
+        font-size: 4rem;
+        font-weight: 400;
+        text-shadow: 0 0 10px rgb(92, 187, 159) ,
+                    0 0 20px rgb(211, 185, 253) ,
+                    0 0 30px rgb(0, 195, 255) ,
+                    0 0 40px #ffffff , 0 0 70px #ffffff ,
+                    0 0 80px #ffffff, 0 0 100px #ffffff ;
+    }
+
+    .content p {
+        font-size: 1rem;
+        font-weight: 300;
+        text-shadow: 0 0 10px rgb(0, 0, 0) ,
+                    0 0 20px rgb(0, 0, 0) ,
+                    0 0 30px rgb(0, 0, 0) ,
+                    0 0 40px #000000 , 0 0 70px #000000 ,
+                    0 0 80px #000000, 0 0 100px #000000 ;
+    }
+
+    .content a {
+        display: block;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 500;
+        width: 50px;
+        height: 50px;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #000000;
+        border-radius: 50%;
+        transition: all 0.2s ease;
+    }
+
+    .content a:hover {
+        background-color: rgb(255, 0, 140);
+    }
+
+    .category {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        width: 80vw;
+        margin-top: 15vh;
+        border-radius: 10px;
+        }
+
+        .category a {
+            text-decoration: none;
+            color: #ffffff;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .card {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 10vw;
+            height: 10vh;
+            border-radius: 10px;
+            background-color: #000000;
+        }
+
+        .card::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background-color: #000000;
+            border-radius: 10px;
+            transition: opacity 0.3s ease-in-out;
+            z-index: 1;
+        }
+
+        .card h2 {
+            position: relative;
+            font-weight: 400;
+            z-index: 2;
+        }
+
+        .card:hover::after {
+            opacity: 0.5;
+        }
+
+        .aventura {
+            background-image: url(assets/img/aventura.jpg);
+            background-size: cover;
+        }
+
+        .terror {
+            background-image: url(assets/img/terror.jpg);
+            background-size: cover;
+        }
+
+        .rpg {
+            background-image: url(assets/img/rpg.jpg);
+            background-size: cover;
+        }
+
+        .shooter {
+            background-image: url(assets/img/shooter.jpg);
+            background-size: cover;
+        }
+
+        .deporte {
+            background-image: url(assets/img/deporte.jpg);
+            background-size: cover;
+        }
+
+/* Estilos de subpáginas */
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    height: auto;
+    padding: 90px 0px 90px 0px;
+    margin-top: 15vh;
+    border-radius: 10px;
+    background-color: #000000;
+}
+
+.gamesBox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 15vw;
+    height: 60vh;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #181818;
+    overflow: hidden;
+}
+
+.game h2 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.game img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
