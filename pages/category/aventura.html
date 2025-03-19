@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
     <title>Glitch Zone - Acción</title>
 </head>
@@ -22,16 +25,30 @@
             </div>
             <div class="section">
                 <h1>Género - Aventura</h1>
+                <div class="toolBar">
+                    <fieldset>
+                        <div class="searchBar">
+                            <input type="text" placeholder="Buscar" id="searchBar" value="" name="searchBar">
+                            <input type="submit" value="Buscar" id="searchBtn" name="searchBtn">
+                        </div>
+                    </fieldset>
+                </div>
                 <div class="gamesBox">
                     <div class="game">
-                        <img src="/assets/img/games/gow.jpg" id="game" alt="God of War">
-                        <h2>God of War Ragnarok - PS5</h2>
-                        <p>$49.990</p>
+                        <a href="#.html"><img src="/assets/img/games/gow.jpg" id="game" alt="God of War"></a>
+                        <a href="#.html"><h2>God of War Ragnarok - PS5</h2></a>
+                        <span>
+                            <p>$49.990</p>
+                            <button id="addBtn">Agregar al Carro</button>
+                        </span>
                     </div>
                     <div class="game">
-                        <img src="/assets/img/games/uncharted.jpg" id="game" alt="Uncharted">
-                        <h2>Uncharted 4: Digital Bundle</h2>
-                        <p>$18.990</p>
+                        <a href="#.html"><img src="/assets/img/games/uncharted.jpg" id="game" alt="Uncharted"></a>
+                        <a href="#.html"><h2>Uncharted 4: Digital Bundle</h2><a/>
+                        <span>
+                            <p>$18.990</p>
+                            <button id="addBtn">Agregar al Carro</button>
+                        </span>
                     </div>
                 </div>
             </div>

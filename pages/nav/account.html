@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <title>Glitch Zone - Cuenta</title>
+</head>
+<body>
+    <div class="layout">
+        <div class="main">
+            <div class="navbar">
+                <nav>
+                    <h1>Glitch Zone</h1>
+                    <ul>
+                        <li><a href="#.html"> <img src="/assets/icon/social.png" alt="Instagram"></a></li>
+                        <li><a href="#.html"> <img src="/assets/icon/facebook.png" alt="Twitter"></a></li>
+                        <li>|</li>
+                        <li><a href="pages/nav/account.html" id="account"> <img src="/assets/icon/persona.png" alt="Cuenta"></a></li>
+                        <li><a class="account" href="pages/nav/account.html">Cuenta</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="section login">
+                <div class="welcome">
+                    <h1>¡Hola! :) </h1>
+                    <p>Inicia sesión para acceder a tu cuenta <br> y comenzar a explorar la colección de juegos que tenemos para ti.</p>
+                </div>
+                <form>
+                    <h2>Iniciar sesión</h2>
+                    <p>¿No tienes una cuenta? <a href="pages/nav/register.html">Registrate</a></p>
+                    <fieldset>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Nombre de usuario</label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Nombre de usuario">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
+                            <div class="passwordContainer">
+                                <button type="button" class="showPassword">
+                                    <svg class="eye-open" stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+                                        <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+                                    </svg>
+                                    <svg class="eye-closed" stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                                        <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c4.478 0 8.268 2.943 9.542 7a10.02 10.02 0 0 1-4.476 5.615M6.89 6.89A10.02 10.02 0 0 0 2.458 12c1.274 4.057 5.064 7 9.542 7a10.43 10.43 0 0 0 1.27-.08" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="m2 2 20 20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="submit" id="loginBtn" name="loginBtn">Iniciar Sesión</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    </div>
+    <script src="/jquery-3.7.1.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/jqueryLogic.js"></script>
+</body>
+</html>

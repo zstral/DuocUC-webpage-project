@@ -8,7 +8,7 @@ body {
     height: 100vh;
     margin: 0;
     color: white;
-    background-color: rgb(19, 19, 19);
+    background-color: #150216;
 }
 
 body {
@@ -35,13 +35,14 @@ body {
     display: flex;
     position: fixed;
     grid-row: 1 / 2;
-    height: 6vh;
+    height: auto;
     padding: 10px;
     margin: 20px;
     border-radius: 25px;
     background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(17, 17, 17, 0.7) 0%, rgba(9,105,121,0.7) 40%, rgba(124,1,38,0.7) 83%);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(90deg, rgba(168, 168, 168, 0.7) 0%, rgba(13, 146, 170, 0.7) 40%, rgba(124, 1, 124, 0.7) 83%);
+    backdrop-filter: blur(20px);
     overflow: hidden;
     }
 
@@ -79,7 +80,7 @@ body {
         display: flex;
         list-style: none;
         margin: 5%;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     .navbar li {
@@ -95,7 +96,7 @@ body {
         width: 1.5rem;
     }
 
-    .navbar a {
+    .navbar a:not(.account){
         display: block;
         padding: 5px;
         text-decoration: none;
@@ -106,12 +107,23 @@ body {
         transition: all 0.2s ease-in-out;
     }
 
-    .navbar a:hover {
+    .navbar a:hover:not(.account) {
         background-color: rgb(255, 0, 191);
     }
 
     #account:hover {
         background-color: rgb(18, 0, 179);
+    }
+
+    .account {
+        font-size: 1rem;
+        color: #c4c4c4;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .account:hover {
+        color: #ffffff;
     }
 
 .content {
@@ -124,7 +136,7 @@ body {
     height: 55vh;
     padding: 90px 0px 90px 0px;
     margin-top: 15vh;
-    border-radius: 10px;
+    border-radius: 6px;
     background-image: url(assets/img/gaming.jpg);
     background-size: cover;
     background-color: #000000;
@@ -203,8 +215,9 @@ body {
             width: 100%;
             height: 100%;
             opacity: 0;
-            background-color: #000000;
+            background-color: #00000081;
             border-radius: 10px;
+            border: 3px solid #47084d;
             transition: opacity 0.3s ease-in-out;
             z-index: 1;
         }
@@ -261,11 +274,12 @@ body {
 
 .gamesBox {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: auto;
+    row-gap: auto;
     justify-content: start;
     align-items: stretch;
     flex-wrap: wrap;
-    gap: 1rem;
     width: 100%;
     height: auto;
     overflow-x: auto;
@@ -276,8 +290,8 @@ body {
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    width: 15vw;
-    height: 60vh;
+    width: 12vw;
+    height: 50vh;
     margin: 30px;
     padding: 20px;
     border-radius: 5px;
@@ -299,4 +313,135 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 5px;
+}
+
+.game a {
+    text-decoration: none;
+}
+
+span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.login {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #31002d;
+    padding: 0;
+    min-height: 82vh;
+    height: auto;
+    overflow: hidden;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 30px;
+    row-gap: 2rem;
+}
+
+.welcome h1 {
+    font-size: 6rem;
+    font-weight: 500;
+}
+
+.welcome p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* Estilos de formularios */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 20px;
+}
+
+form h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 20px 0px 20px 0px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #3d0050;
+}
+
+label {
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    margin: 10px;
+    font-size: 1rem;
+}
+
+input[type="text"], input[type="password"] {
+    background-color: #6b4386;
+    border: 1px solid rgb(132, 0, 255);
+}
+
+.form-control {
+    padding: 10px;
+    padding-right: 40px;
+    font-size: 1rem;
+    border-radius: 5px;
+    outline: none;
+}
+
+.passwordContainer {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.showPassword {
+    display: flex;
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    bottom: 5px;
+    right: 10px;
+    padding: 5px
+}
+
+.showPassword svg {
+    width: 25px;
+    height: 25px;
+    stroke: rgb(165, 165, 165);
+    transition: stroke 0.3s ease;
+}
+
+.showPassword:hover svg {
+    stroke: rgb(109, 109, 109);
+}
+
+#loginBtn {
+    padding: 12px;
+    background-color: rgb(76, 0, 255);
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#loginBtn:hover {
+    background-color: #00ccb1;
 }
