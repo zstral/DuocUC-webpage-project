@@ -291,7 +291,7 @@ body {
     align-items: start;
     justify-content: center;
     width: 12vw;
-    height: 50vh;
+    height: auto;
     margin: 30px;
     padding: 20px;
     border-radius: 5px;
