@@ -26,42 +26,56 @@
                     </ul>
                 </nav>
             </div>
-            <div class="section login">
+            <div class="section signup">
                 <div class="welcome">
-                    <h1>¡Hola! :) </h1>
-                    <p>Inicia sesión para acceder a tu cuenta <br> y comenzar a explorar la colección de juegos que tenemos para ti.</p>
+                    <h1></h1>
+                    <p></p>
                 </div>
-                <form id="loginForm">
-                    <h2>Iniciar sesión</h2>
-                    <p>¿No tienes una cuenta? <a href="/pages/nav/signup.html">Regístrate</a></p>
+                <form id="signupForm">
+                    <h2>Regístrate</h2>
+                    <p>¿Ya tienes una cuenta? <a href="/pages/nav/account.html">Inicia sesión</a></p>
                     <fieldset>
+                        <div class="nameField mb-3">
+                            <div>
+                                <label for="name" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Nombre">
+                                <div class="invalid-feedback">Por favor, ingresa tu primer nombre.</div>
+                            </div>
+                            <div>
+                                <label for="lastname" class="form-label">Apellido</label>
+                                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Apellido">
+                                <div class="invalid-feedback">Por favor, ingresa tu apellido.</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Fecha de nacimiento</label>
+                            <input type="date" class="form-control" id="date" name="date"></label>
+                            <div class="invalid-feedback">Debes ser mayor a 13 años para registrarte.</div>
+                        </div>
                         <div class="mb-3">
                             <label for="username" class="form-label">Nombre de usuario</label>
                             <input type="text" class="form-control" id="username" name="username" placeholder="Nombre de usuario">
                         </div>
                         <div class="mb-3">
+                            <label for="email" class="form-label">Correo</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Correo">
+                        </div>
+                        <div>
+                            <label for="address class="form-label">Dirección</label>
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Dirección"></label>
+                        </div>
+                        <div class="mb-3">
                             <label for="password" class="form-label">Contraseña</label>
                             <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
-                            <div class="passwordContainer">
-                                <button type="button" class="showPassword">
-                                    <svg class="eye-open" stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
-                                        <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
-                                    </svg>
-                                    <svg class="eye-closed" stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: none;">
-                                        <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c4.478 0 8.268 2.943 9.542 7a10.02 10.02 0 0 1-4.476 5.615M6.89 6.89A10.02 10.02 0 0 0 2.458 12c1.274 4.057 5.064 7 9.542 7a10.43 10.43 0 0 0 1.27-.08" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="m2 2 20 20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                            </div>
+                            <div class="invalid-feedback">La contraseña debe tener mínimo 6 caracteres y máximo 18.</div>
                         </div>
-                        <button type="submit" id="loginBtn" name="loginBtn">Iniciar Sesión</button>
+                        <button type="submit" id="signupBtn" name="signupBtn">Registrarme</button>
                     </fieldset>
                 </form>
             </div>
-        </div>
-        <div class="footer">
+            <div class="footer">
+                &nbsp
+            </div>
         </div>
     </div>
     <script src="/jquery-3.7.1.min.js"></script>

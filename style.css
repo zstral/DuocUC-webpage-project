@@ -336,6 +336,13 @@ span {
     overflow: hidden;
 }
 
+.signup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #31002d;
+    padding: 0;
+}
+
 .welcome {
     display: flex;
     flex-direction: column;
@@ -386,9 +393,22 @@ label {
     font-size: 1rem;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="date"], input[type="email"] {
     background-color: #6b4386;
     border: 1px solid rgb(132, 0, 255);
+}
+
+.nameField {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    column-gap: 10px;
+}
+
+.nameField input {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 .form-control {
@@ -443,5 +463,21 @@ input[type="text"], input[type="password"] {
 }
 
 #loginBtn:hover {
+    background-color: #00ccb1;
+}
+
+#signupBtn {
+    padding: 12px;
+    background-color: rgb(76, 0, 255);
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#signupBtn:hover {
     background-color: #00ccb1;
 }
