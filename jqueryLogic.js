@@ -19,6 +19,8 @@ $(document).ready(function() {
     });
 });
 
+/* Validación de formulario de registro */
+
 $(document).ready(function() {
     $('#signupForm').submit(function(event) {
         event.preventDefault();
@@ -60,7 +62,7 @@ $(document).ready(function() {
         }
 
         var username = $('#username').val().trim();
-        if (username.length < 3) {
+        if (username.length < 6) {
             $('#username').addClass('is-invalid');
             isValid = false;
         }

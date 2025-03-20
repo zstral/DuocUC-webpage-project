@@ -351,6 +351,11 @@ span {
     row-gap: 2rem;
 }
 
+.welcome img {
+    width: 100%;
+    height: auto;
+}
+
 .welcome h1 {
     font-size: 6rem;
     font-weight: 500;
