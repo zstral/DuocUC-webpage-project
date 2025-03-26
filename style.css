@@ -266,20 +266,46 @@ body {
     justify-content: center;
     width: 80vw;
     height: auto;
-    padding: 90px 0px 90px 0px;
+    padding: 5px 0px 90px 0px;
     margin-top: 15vh;
     border-radius: 10px;
-    background-color: #000000;
+    background-color: #31002d;
+}
+
+.section h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.sectionHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 95%;
+}
+
+.sectionHeader fieldset {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    background-color:#150216;
+    border: none;
+}
+
+.sectionHeader input[type="text"] {
+    border: none;
+    border-radius: 5px;
+    height: 3vh;
+    background-color: #2f0531;
 }
 
 .gamesBox {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: auto;
-    row-gap: auto;
-    justify-content: start;
-    align-items: stretch;
-    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: auto;
     overflow-x: auto;
@@ -295,16 +321,23 @@ body {
     margin: 30px;
     padding: 20px;
     border-radius: 5px;
-    background-color: #181818;
+    background-color: #aeb8b8;
     overflow: hidden;
 }
 
 .game h2 {
+    color: #000000;
     font-size: 1rem;
     font-weight: 400;
+    transition: all 0.2s ease-in-out;
+}
+
+.game h2:hover {
+    color: #ffffff;
 }
 
 .game p {
+    color:#006797;
     font-size: 1.2rem;
     font-weight: 400;
 }
@@ -485,4 +518,129 @@ input[type="text"], input[type="password"], input[type="date"], input[type="emai
 
 #signupBtn:hover {
     background-color: #00ccb1;
+}
+
+/* Estilo para Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+        
+.main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto;
+}
+
+    .navbar nav {
+        height: 5vh;
+    }
+
+    .navbar ul{
+        margin: 5%;
+        gap: 1.25rem;
+    }
+
+    .navbar li {
+        font-size: 1.25rem;
+    }
+
+    .navbar li img {
+        height: 1.25rem;
+        width: 1.25rem;
+    }
+
+    .category {
+        gap: 2rem;
+        margin-top: 10vh;
+        }
+
+        .category a {
+            font-size: 0.8rem;
+        }
+
+        .card {
+            width: 15vw;
+            height: 6vh;
+        }
+    
+/* Subpáginas */
+
+    .gamesBox {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .game {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        width: 14vw;
+    }
+
+    .game h2 {
+        font-size: 1rem;
+    }
+
+    .game p {
+        font-size: 1rem;
+    }
+
+    span {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+/* Estilo para smartphones */
+
+@media (max-width: 767px) {
+
+.content {
+    text-align: center;
+    width: 80vw;
+    height: 55vh;
+    padding: 5px 0px 90px 0px;
+    }
+
+    .navbar nav {
+        display: flex;
+        width: 85vw;
+        height: 5vh;
+    }
+
+    .navbar h1 {
+        font-size: 1.5rem;
+    }
+
+    .navbar ul{
+        margin: 1%;
+        gap: 0.5rem;
+        padding:0;
+    }
+
+    .account p {
+        display: none;
+    }
+
+    .category {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-top: 10vh;
+        }
+
+        .category a {
+            font-size: 0.8rem;
+        }
+
+        .card {
+            width: 26vw;
+            height: 6vh;
+        }
+
+/* Subpáginas */
+
+    .gamesBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
 }
