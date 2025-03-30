@@ -26,20 +26,36 @@
                 <li><a href="/index.html" id="home"> <img src="/assets/icon/home.png" alt="Inicio"></a></li>
                 <li><a href="/pages/nav/account.html" id="account"> <img src="/assets/icon/persona.png" alt="Cuenta"></a></li>
                 <li><a class="account" href="/pages/nav/account.html">Cuenta</a></li>
-                <li><a href="/carrito.html" id="home"></a>
+                <li><a href="../nav/carrito.html">🛒</a>
             </ul>
         </nav>
     </div>
 
 <!-- lista donde aparecen productos -->
-    <h1>🛒 Carrito de Compras</h1>
+    
+        
+
+    
+    
     <div class="cart">
+        <h1>🛒 Carrito de Compras</h1>
         <ul id="lista-carrito"></ul>
         <p><strong>Total:</strong> $<span id="total">0</span></p>
         <button onclick="vaciarCarrito()">🗑 Vaciar Carrito</button>
+        <a href="/index.html">Volver a la Tienda</a>
     </div>
 
-    <a href="index.html">Volver a la Tienda</a>
+    
+    
+
+        <style>
+            .cart {
+            padding-top: 120px;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+        </style>
+
 
     <script>
         function cargarCarrito() {
