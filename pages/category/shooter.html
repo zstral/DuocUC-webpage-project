@@ -32,12 +32,32 @@
                         <img src="/assets/img/games/cod.jpg" id="game" alt="Call of Duty Black Ops 6">
                         <h2>Call of Duty Black Ops 6 - Xbox Series X/S</h2>
                         <p>$39.990</p>
+                        <span>
+                            <button onclick="agregarAlCarrito('Call of Duty Black Ops 6 - Xbox Series X/S', 39990)">Agregar al carrito</button>
+                        </span>
                     </div>
+
+
                     <div class="game">
                         <img src="/assets/img/games/doom.jpg" id="game" alt="Doom Eternal">
                         <h2>Doom Eternal - PS4</h2>
                         <p>$14.990</p>
+                        <span>
+                            <button onclick="agregarAlCarrito('Doom Eternal - PS4', 14990)">Agregar al carrito</button>
+                        </span>
                     </div>
+
+                    <a href="carrito.html">Ver Carrito</a>
+
+                    <script>
+                        function agregarAlCarrito(nombre, precio) {
+                            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+                            carrito.push({ nombre, precio });
+                            localStorage.setItem("carrito", JSON.stringify(carrito));
+                            alert(`${nombre} agregado al carrito ✅`);
+                        }
+                    </script>
+
                 </div>
             </div>
             <div class="footer">

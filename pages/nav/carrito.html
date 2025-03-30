@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/style.css">
+        <title>Glitch Zone - Cuenta</title>
+    </head>
+    
+
+
+<body>
+
+<!-- navbar -->
+    <div class="navbar">
+        <nav>
+            <h1>Glitch Zone</h1>
+            <ul>
+                <li><a href="#.html"> <img src="/assets/icon/social.png" alt="Instagram"></a></li>
+                <li><a href="#.html"> <img src="/assets/icon/facebook.png" alt="Twitter"></a></li>
+                <li>|</li>
+                <li><a href="/index.html" id="home"> <img src="/assets/icon/home.png" alt="Inicio"></a></li>
+                <li><a href="/pages/nav/account.html" id="account"> <img src="/assets/icon/persona.png" alt="Cuenta"></a></li>
+                <li><a class="account" href="/pages/nav/account.html">Cuenta</a></li>
+                <li><a href="/carrito.html" id="home"></a>
+            </ul>
+        </nav>
+    </div>
+
+<!-- lista donde aparecen productos -->
+    <h1>🛒 Carrito de Compras</h1>
+    <div class="cart">
+        <ul id="lista-carrito"></ul>
+        <p><strong>Total:</strong> $<span id="total">0</span></p>
+        <button onclick="vaciarCarrito()">🗑 Vaciar Carrito</button>
+    </div>
+
+    <a href="index.html">Volver a la Tienda</a>
+
+    <script>
+        function cargarCarrito() {
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            let listaCarrito = document.getElementById("lista-carrito");
+            let totalElemento = document.getElementById("total");
+
+            listaCarrito.innerHTML = ""; // Limpiar antes de actualizar
+
+            let total = 0;
+            carrito.forEach((producto, index) => {
+                let item = document.createElement("li");
+                item.textContent = `${producto.nombre} - $${producto.precio}`;
+
+                // Botón para eliminar producto
+                let botonEliminar = document.createElement("button");
+                botonEliminar.textContent = "❌";
+                botonEliminar.onclick = () => eliminarDelCarrito(index);
+                item.appendChild(botonEliminar);
+
+                listaCarrito.appendChild(item);
+                total += producto.precio;
+            });
+
+            totalElemento.textContent = total;
+        }
+
+        function eliminarDelCarrito(index) {
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            carrito.splice(index, 1); // Eliminar producto
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            cargarCarrito(); // Actualizar vista
+        }
+
+        function vaciarCarrito() {
+            localStorage.removeItem("carrito");
+            cargarCarrito();
+        }
+
+        // Cargar carrito al iniciar
+        cargarCarrito();
+    </script>
+
+</body>
+</html>

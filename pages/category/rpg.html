@@ -28,22 +28,48 @@
             <div class="section">
                 <h1>Género - RPG</h1>
                 <div class="gamesBox">
+                <!--  -->
                     <div class="game">
-                        <img src="/assets/img/games/ff.png" id="game" alt="Final Fantasy VII Rebirth">
-                        <h2>Final Fantasy VII Rebirth - PS5</h2>
-                        <p>$59.990</p>
+                        <div class="row">
+                            <div class="col-12">
+                                <img src="/assets/img/games/ff.png" id="game" alt="Final Fantasy VII Rebirth">
+                                <h2>Final Fantasy VII Rebirth - PS5</h2>
+                                <p>$59.990</p>
+                                <span>
+                                    <button onclick="agregarAlCarrito('Final Fantasy VII Rebirth', 59990)">Agregar al carrito</button>
+                                </span>                     
+                            </div>
+                        </div>
                     </div>
+                    
                     <div class="game">
-                        <img src="/assets/img/games/fallout.jpg" id="game" alt="Fallout 4">
-                        <h2>Fallout 4 - PS4</h2>
-                        <p>$12.990</p>
+                        <div class="row">
+                            <div class="col-12">
+                                <img src="/assets/img/games/fallout.jpg" id="game" alt="Fallout 4">
+                                <h2>Fallout 4 - PS4</h2>
+                                <p>$12.990</p>
+                                <span>
+                                    <button onclick="agregarAlCarrito('Fallout 4', 12990)">Agregar al carrito</button>
+                                </span>
+                            </div>
+                        </div>
                     </div>
+
+                    <a href="carrito.html">Ver Carrito</a>
+
+    <script>
+        function agregarAlCarrito(nombre, precio) {
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            carrito.push({ nombre, precio });
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            alert(`${nombre} agregado al carrito ✅`);
+        }
+    </script>
+                </div>
+                <div class="footer">
+                    <p>&nbsp</p>
                 </div>
             </div>
-            <div class="footer">
-                <p>&nbsp</p>
-            </div>
         </div>
-    </div>
 </body>
 </html>

@@ -37,39 +37,40 @@
                         </fieldset>
                     </div>
                 </div>
+                
+                
                 <div class="gamesBox">
                     <div class="game">
                         <a href="#.html"><img src="/assets/img/games/gow.jpg" id="game" alt="God of War"></a>
                         <a href="#.html"><h2>God of War Ragnarok - PS5</h2></a>
+                        <p>$49.990</p>
                         <span>
-                            <p>$49.990</p>
-                            <button id="addBtn">Agregar al Carro</button>
+                            
+                            <button onclick="agregarAlCarrito('God of War Ragnarok - PS5', 49990)">Agregar al carrito</button>
                         </span>
                     </div>
                     <div class="game">
                         <a href="#.html"><img src="/assets/img/games/uncharted.jpg" id="game" alt="Uncharted"></a>
                         <a href="#.html"><h2>Uncharted 4: Digital Bundle</h2></a>
+                        <p>$18.990</p>
                         <span>
-                            <p>$18.990</p>
-                            <button id="addBtn">Agregar al Carro</button>
+                            
+                            <button onclick="agregarAlCarrito('Uncharted 4: Digital Bundle', 18990)">Agregar al carrito</button>
                         </span>
                     </div>
-                    <div class="game">
-                        <a href="#.html"><img src="/assets/img/games/uncharted.jpg" id="game" alt="Uncharted"></a>
-                        <a href="#.html"><h2>Uncharted 4: Digital Bundle</h2></a>
-                        <span>
-                            <p>$18.990</p>
-                            <button id="addBtn">Agregar al Carro</button>
-                        </span>
-                    </div>
-                    <div class="game">
-                        <a href="#.html"><img src="/assets/img/games/uncharted.jpg" id="game" alt="Uncharted"></a>
-                        <a href="#.html"><h2>Uncharted 4: Digital Bundle</h2></a>
-                        <span>
-                            <p>$18.990</p>
-                            <button id="addBtn">Agregar al Carro</button>
-                        </span>
-                    </div>
+                    
+
+                    <a href="carrito.html">Ver Carrito</a>
+
+    <script>
+        function agregarAlCarrito(nombre, precio) {
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            carrito.push({ nombre, precio });
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            alert(`${nombre} agregado al carrito ✅`);
+        }
+    </script>
+
                 </div>
             </div>
             <div class="footer">

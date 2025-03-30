@@ -28,16 +28,36 @@
             <div class="section">
                 <h1>Género - Deporte</h1>
                 <div class="gamesBox">
+
+
                     <div class="game">
                         <img src="/assets/img/games/fifa.jpg" id="game" alt="EA Sports FC24">
                         <h2>EA Sports FC24 - PS5</h2>
                         <p>$29.990</p>
+                        <span>
+                            <button onclick="agregarAlCarrito('EA Sports FC24 - PS5', 29990)">Agregar al carrito</button>
+                        </span>
                     </div>
                     <div class="game">
                         <img src="/assets/img/games/nba.jpg" id="game" alt="NBA 2K24">
                         <h2>NBA 2K24 - PS5</h2>
                         <p>$27.990</p>
+                        <span>
+                            <button onclick="agregarAlCarrito('NBA 2K24 - PS5', 27990)">Agregar al carrito</button>
+                        </span>
                     </div>
+
+                    <a href="carrito.html">Ver Carrito</a>
+
+                    <script>
+                        function agregarAlCarrito(nombre, precio) {
+                            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+                            carrito.push({ nombre, precio });
+                            localStorage.setItem("carrito", JSON.stringify(carrito));
+                            alert(`${nombre} agregado al carrito ✅`);
+                        }
+                    </script>
+
                 </div>
             </div>
             <div class="footer">
