@@ -16,61 +16,37 @@
                 <nav>
                     <h1>Glitch Zone</h1>
                     <ul>
-                        <li><a href="#.html"> <img src="/assets/icon/social.png" alt="Instagram"></a></li>
-                        <li><a href="#.html"> <img src="/assets/icon/facebook.png" alt="Twitter"></a></li>
-                        <li>|</li>
                         <li><a href="/index.html" id="home"> <img src="/assets/icon/home.png" alt="Inicio"></a></li>
+                        <li><a href="/pages/nav/cart.html"> <img src="/assets/icon/carrito.png" alt="Carrito"></a>
+                        <li>|</li>
                         <li><a href="/pages/nav/account.html" id="account"> <img src="/assets/icon/persona.png" alt="Cuenta"></a></li>
-                        <li><a class="account" href="/pages/nav/account.html">Cuenta</a></li>
-                        <li><a href="../nav/carrito.html">🛒</a>
+                        <li><a class="account" href="/pages/nav/account.html"><p>Cuenta</p></a></li>
                     </ul>
                 </nav>
             </div>
             <div class="section">
                 <h1>Género - RPG</h1>
                 <div class="gamesBox">
-                <!--  -->
                     <div class="game">
-                        <div class="row">
-                            <div class="col-12">
-                                <img src="/assets/img/games/ff.png" id="game" alt="Final Fantasy VII Rebirth">
-                                <h2>Final Fantasy VII Rebirth - PS5</h2>
-                                <p>$59.990</p>
-                                <span>
-                                    <button onclick="agregarAlCarrito('Final Fantasy VII Rebirth', 59990)">Agregar al carrito</button>
-                                </span>                     
-                            </div>
-                        </div>
+                        <img src="/assets/img/games/ff.png" id="game" alt="Final Fantasy VII Rebirth">
+                        <h2>Final Fantasy VII Rebirth - PS5</h2>
+                        <p>$59.990</p>
+                        <button class="add" data-name="Final Fantasy VII Rebirth - PS5" data-price="59990">Agregar al carrito</button>
                     </div>
-                    
                     <div class="game">
-                        <div class="row">
-                            <div class="col-12">
-                                <img src="/assets/img/games/fallout.jpg" id="game" alt="Fallout 4">
-                                <h2>Fallout 4 - PS4</h2>
-                                <p>$12.990</p>
-                                <span>
-                                    <button onclick="agregarAlCarrito('Fallout 4', 12990)">Agregar al carrito</button>
-                                </span>
-                            </div>
-                        </div>
+                        <img src="/assets/img/games/fallout.jpg" id="game" alt="Fallout 4">
+                        <h2>Fallout 4 - PS4</h2>
+                        <p>$12.990</p>
+                        <button class="add" data-name="Fallout 4 - PS4" data-price="12990">Agregar al carrito</button>
                     </div>
-
-
-
-    <script>
-        function agregarAlCarrito(nombre, precio) {
-            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-            carrito.push({ nombre, precio });
-            localStorage.setItem("carrito", JSON.stringify(carrito));
-            alert(`${nombre} agregado al carrito ✅`);
-        }
-    </script>
-                </div>
-                <div class="footer">
-                    <p>&nbsp</p>
                 </div>
             </div>
+            <div class="footer">
+                <p>&nbsp</p>
+            </div>
         </div>
+    </div>
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/shopLogic.js"></script>
 </body>
 </html>

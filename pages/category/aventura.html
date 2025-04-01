@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
-    <title>Glitch Zone - Acción</title>
+    <title>Glitch Zone - Aventura</title>
 </head>
 <body>
     <div class="layout">
@@ -16,13 +16,11 @@
                 <nav>
                     <h1>Glitch Zone</h1>
                     <ul>
-                        <li><a href="#.html"> <img src="/assets/icon/social.png" alt="Instagram"></a></li>
-                        <li><a href="#.html"> <img src="/assets/icon/facebook.png" alt="Twitter"></a></li>
-                        <li>|</li>
                         <li><a href="/index.html" id="home"> <img src="/assets/icon/home.png" alt="Inicio"></a></li>
+                        <li><a href="/pages/nav/cart.html"> <img src="/assets/icon/carrito.png" alt="Carrito"></a>
+                        <li>|</li>
                         <li><a href="/pages/nav/account.html" id="account"> <img src="/assets/icon/persona.png" alt="Cuenta"></a></li>
-                        <li><a class="account" href="/pages/nav/account.html">Cuenta</a></li>
-                        <li><a href="../nav/carrito.html">🛒</a>
+                        <li><a class="account" href="/pages/nav/account.html"><p>Cuenta</p></a></li>
                     </ul>
                 </nav>
             </div>
@@ -38,40 +36,19 @@
                         </fieldset>
                     </div>
                 </div>
-                
-                
                 <div class="gamesBox">
                     <div class="game">
                         <a href="#.html"><img src="/assets/img/games/gow.jpg" id="game" alt="God of War"></a>
                         <a href="#.html"><h2>God of War Ragnarok - PS5</h2></a>
                         <p>$49.990</p>
-                        <span>
-                            
-                            <button onclick="agregarAlCarrito('God of War Ragnarok - PS5', 49990)">Agregar al carrito</button>
-                        </span>
+                        <button class="add" data-name="God of War Ragnarok - PS5" data-price="49990">Agregar al carrito</button>  
                     </div>
                     <div class="game">
                         <a href="#.html"><img src="/assets/img/games/uncharted.jpg" id="game" alt="Uncharted"></a>
                         <a href="#.html"><h2>Uncharted 4: Digital Bundle</h2></a>
                         <p>$18.990</p>
-                        <span>
-                            
-                            <button onclick="agregarAlCarrito('Uncharted 4: Digital Bundle', 18990)">Agregar al carrito</button>
-                        </span>
+                        <button class="add" data-name="Uncharted 4: Digital Bundle" data-price="18990">Agregar al carrito</button>
                     </div>
-                    
-
-                    <a href="carrito.html">Ver Carrito</a>
-
-    <script>
-        function agregarAlCarrito(nombre, precio) {
-            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-            carrito.push({ nombre, precio });
-            localStorage.setItem("carrito", JSON.stringify(carrito));
-            alert(`${nombre} agregado al carrito ✅`);
-        }
-    </script>
-
                 </div>
             </div>
             <div class="footer">
@@ -79,5 +56,7 @@
             </div>
         </div>
     </div>
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/shopLogic.js"></script>
 </body>
 </html>

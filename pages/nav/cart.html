@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
-    <title>Glitch Zone - Deporte</title>
+    <title>Glitch Zone - Carrito</title>
 </head>
 <body>
     <div class="layout">
@@ -24,22 +24,19 @@
                     </ul>
                 </nav>
             </div>
-            <div class="section">
-                <h1>Género - Deporte</h1>
-                <div class="gamesBox">
-                    <div class="game">
-                        <img src="/assets/img/games/fifa.jpg" id="game" alt="EA Sports FC24">
-                        <h2>EA Sports FC24 - PS5</h2>
-                        <p>$29.990</p>
-                        <button class="add" data-name="EA Sports FC24 - PS5" data-price="29990">Agregar al carrito</button>
-                    </div>
-                    <div class="game">
-                        <img src="/assets/img/games/nba.jpg" id="game" alt="NBA 2K24">
-                        <h2>NBA 2K24 - PS5</h2>
-                        <p>$27.990</p>
-                        <button class="add" data-name="NBA 2K24 - PS5" data-price="27990">Agregar al carrito</button>
+            <div class="section shopingcart">
+                <div class="sectionHeader">
+                    <h1>🛒Carrito de Compras</h1>
+                    <div class="toolBar">
+
                     </div>
                 </div>
+                <div class="cart">
+                    <ul id="lista-carrito">
+                    </ul>
+                    <p><strong>Total:</strong> $<span id="total">0</span></p>
+                    <button id="vaciar">Eliminar todo</button>
+                </Div>
             </div>
             <div class="footer">
                 <p>&nbsp</p>
@@ -48,5 +45,6 @@
     </div>
     <script src="/js/jquery-3.7.1.min.js"></script>
     <script src="/js/shopLogic.js"></script>
+    <script src="/js/shopingcart.js"></script>
 </body>
 </html>

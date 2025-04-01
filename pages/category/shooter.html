@@ -16,13 +16,11 @@
                 <nav>
                     <h1>Glitch Zone</h1>
                     <ul>
-                        <li><a href="#.html"> <img src="/assets/icon/social.png" alt="Instagram"></a></li>
-                        <li><a href="#.html"> <img src="/assets/icon/facebook.png" alt="Twitter"></a></li>
-                        <li>|</li>
                         <li><a href="/index.html" id="home"> <img src="/assets/icon/home.png" alt="Inicio"></a></li>
+                        <li><a href="/pages/nav/cart.html"> <img src="/assets/icon/carrito.png" alt="Carrito"></a>
+                        <li>|</li>
                         <li><a href="/pages/nav/account.html" id="account"> <img src="/assets/icon/persona.png" alt="Cuenta"></a></li>
-                        <li><a class="account" href="/pages/nav/account.html">Cuenta</a></li>
-                        <li><a href="../nav/carrito.html">🛒</a>
+                        <li><a class="account" href="/pages/nav/account.html"><p>Cuenta</p></a></li>
                     </ul>
                 </nav>
             </div>
@@ -33,32 +31,14 @@
                         <img src="/assets/img/games/cod.jpg" id="game" alt="Call of Duty Black Ops 6">
                         <h2>Call of Duty Black Ops 6 - Xbox Series X/S</h2>
                         <p>$39.990</p>
-                        <span>
-                            <button onclick="agregarAlCarrito('Call of Duty Black Ops 6 - Xbox Series X/S', 39990)">Agregar al carrito</button>
-                        </span>
+                        <button class="add" data-name="Call of Duty Black Ops 6 - Xbox Series X/S" data-price="39990">Agregar al carrito</button>
                     </div>
-
-
                     <div class="game">
                         <img src="/assets/img/games/doom.jpg" id="game" alt="Doom Eternal">
                         <h2>Doom Eternal - PS4</h2>
                         <p>$14.990</p>
-                        <span>
-                            <button onclick="agregarAlCarrito('Doom Eternal - PS4', 14990)">Agregar al carrito</button>
-                        </span>
+                        <button class="add" data-name="Doom Eternal - PS4" data-price="14990">Agregar al carrito</button>
                     </div>
-
-
-
-                    <script>
-                        function agregarAlCarrito(nombre, precio) {
-                            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-                            carrito.push({ nombre, precio });
-                            localStorage.setItem("carrito", JSON.stringify(carrito));
-                            alert(`${nombre} agregado al carrito ✅`);
-                        }
-                    </script>
-
                 </div>
             </div>
             <div class="footer">
@@ -66,5 +46,7 @@
             </div>
         </div>
     </div>
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/shopLogic.js"></script>
 </body>
 </html>
